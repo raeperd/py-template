@@ -2,15 +2,15 @@ from pathlib import Path
 from argparse import ArgumentParser
 from argparse import Action
 
-
 def get_argparser():
-    parser = ArgumentParser()
-    parser.add_argument("target_directory_path",
-                        help="directoy path which has object files in it",
+    parser = ArgumentParser("Python script base to do something in PATH")
+    parser.add_argument("-p",
+                        "--target-dir",
+                        metavar="PATH",
+                        help="Directory path which has target files to do something",
                         type=Path,
                         action=DirectoryCheckAction)
     return parser
-
 
 class DirectoryCheckAction(Action):
 

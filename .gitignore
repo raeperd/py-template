@@ -3,3 +3,5 @@
 __pycache__
 output
 .ipynb_checkpoints
+
+log.debug
